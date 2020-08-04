@@ -33,7 +33,7 @@ class WebServices {
         session = URLSession.init(configuration: sessionConfig)
         request.httpMethod = "GET"
 
-       let task = session.dataTask(with: request) {[weak self] (data, response, error) in
+       let task = session.dataTask(with: request) {(data, response, error) in
          
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
             completion(nil,"unable to connect to server")
