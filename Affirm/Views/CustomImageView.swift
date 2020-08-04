@@ -36,13 +36,13 @@ class CustomImageView: UIImageView {
         guard let url = NSURL(string: urlString) else { return }
         
         image = nil
-        //activityIndicator.startAnimating()
+        activityIndicator.startAnimating()
         
         // retrieves image if already available in cache
         if let imageFromCache = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
             
             self.image = imageFromCache
-           // activityIndicator.stopAnimating()
+            activityIndicator.stopAnimating()
             return
         }
         
@@ -52,7 +52,7 @@ class CustomImageView: UIImageView {
             if error != nil {
                 print(error as Any)
                 DispatchQueue.main.async(execute: {
-               //    self.activityIndicator.stopAnimating()
+                self.activityIndicator.stopAnimating()
                 })
                 return
             }
@@ -65,7 +65,7 @@ class CustomImageView: UIImageView {
                         self.image = imageToCache
                     }
                     
-                    //imageCache.setObject(imageToCache, forKey: url as AnyObject)
+                    imageCache.setObject(imageToCache, forKey: url as AnyObject)
                 }
                 self.activityIndicator.stopAnimating()
             })
