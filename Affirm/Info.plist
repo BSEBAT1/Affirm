@@ -20,6 +20,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>App needs location to fetch restuarants from Yelp</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>App needs location to fetch restuarants from Yelp</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>App needs location to fetch restuarants from Yelp</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -50,8 +56,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -60,11 +64,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>App needs location to fetch restuarants from Yelp</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>App needs location to fetch restuarants from Yelp</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>App needs location to fetch restuarants from Yelp</string>
 </dict>
 </plist>
