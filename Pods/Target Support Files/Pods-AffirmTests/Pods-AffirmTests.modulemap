@@ -1,0 +1,6 @@
+framework module Pods_AffirmTests {
+  umbrella header "Pods-AffirmTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

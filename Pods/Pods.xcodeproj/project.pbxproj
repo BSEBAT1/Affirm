@@ -1,0 +1,1062 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00111E4C5E56E2077770FDCE31FDB47A /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A57C1A9513B7663A4B98F1D5458219 /* SwipeDirection.swift */; };
+		003D0849238C84847D849C9D1E131D90 /* CardTransformProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA6E9519F3ADEA979C2AC2E2A520FD3 /* CardTransformProvider.swift */; };
+		0427E8573A16B24C2BCD92D8C1F8068F /* Pods-Affirm-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 810C2C712D294AB3B312D3412D260EFB /* Pods-Affirm-dummy.m */; };
+		07585A664B2EE3F2C5A5147AFEB30661 /* Pods-Affirm-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FCE1066CD3665F0713187E28033B52B /* Pods-Affirm-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078A81162246BC7B2A5C94103B630BCA /* CardStackTransformProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BE7B4B41C9F48F3B33B66D12BA5CF4 /* CardStackTransformProvider.swift */; };
+		08405585CE27C43F7FB97998BEF23B49 /* SwipeCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582C025010D9D41E093D3ED47FC88C2 /* SwipeCardStack.swift */; };
+		0B23AB476565EF7E8B5D70405A832FDA /* PanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF24CF64E0DB4E78F1B627CEA1427F25 /* PanGestureRecognizer.swift */; };
+		0FC7714476E9023AA58EA1D3D612711D /* CardStackLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FD3B7367E8D6A0EB641F301637AE15 /* CardStackLayoutProvider.swift */; };
+		1D36C691376DD9EB4D6397F1F31EC17F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		241D9FE649B9726C97674131B998A0CE /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19978CDAD92175DDD823D39E0CDE0F79 /* SwipeView.swift */; };
+		27FB9FF578F7C05634DAE978BE1FFA7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		35DEC29CDD34B659D124A66B43086466 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		37F3F93D2F9B391DC6989E2F7A645ED5 /* Shuffle.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EE54033A4C5FAD09E8E288363A1BAE /* Shuffle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EF43A27DC8EC1A11270920606C4FB93 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA09E21A0EEA3F84D7908A2BC36BFDDB /* Array+Extensions.swift */; };
+		6637C7BE6C09A76268A5EB00CDB5486F /* CardAnimationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D5CC00A2FFAC5FD2FEA32C78949CEF /* CardAnimationOptions.swift */; };
+		67183DBEDE814A86F7B424CFE5AF6F1A /* Pods-AffirmTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B80E27DC5903F55A4A153553073A84 /* Pods-AffirmTests-dummy.m */; };
+		6DCE1C5299CD365B28E5C0F914277E9C /* Pods-AffirmTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE65C6A8A3C90185763B645B6C8561E8 /* Pods-AffirmTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76D64CE4AB2C9274A6AC1C07DEB9FD54 /* CardStackAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02769A5C859596911CE499D40D138627 /* CardStackAnimator.swift */; };
+		7B0DB0A39270B8C27DAE80EAF87FF1F2 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B334D1B2F65DB22344A5E4759353FCEA /* StringUtils.swift */; };
+		8C504F7CDC715DC2CEB87E9E00AAA0E6 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A062F31D58340287DAFF12781FD8DC /* CGVector+Extensions.swift */; };
+		95C66BE7B914BF18CDBC286798AB3918 /* SwipeCardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBDFE5F1B0108F816A2F67830F730B /* SwipeCardDelegate.swift */; };
+		980FE0662CD63F48195F15C1ACCA7C76 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243437504DB3BB98CDF1D80F78D633B2 /* UIView+Extensions.swift */; };
+		A4843EF056BB1A5A6A0E282BDF6705ED /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5680B7F7BF438527CF292FCE613BD48A /* Animator.swift */; };
+		A6D43D352ACDE0C44641DA912206DAB8 /* CardStackAnimationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FCC34465CFC9FB3FD28746E3501F1F /* CardStackAnimationOptions.swift */; };
+		B18FA055160CC5AB09B3B19739220EEF /* SwipeCardStackDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5F53B396E93C9BBFB266F9C206C29 /* SwipeCardStackDataSource.swift */; };
+		B2C4CB5C014E070B5E249DBA815211CB /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B184FA724A0497B3F6069256AE4EB36D /* CGPoint+Extensions.swift */; };
+		B47D64FDF36C8155ECD5CE88BE4ED589 /* Shuffle-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1C428458DFC9CCA8BC24BA90D642BA1 /* Shuffle-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAFE4E4A557366800E8CA4DE37937798 /* CardLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7DE66F6BDAC0DB45CC3DCB86B5A29 /* CardLayoutProvider.swift */; };
+		BF710E38993571FD049C2181722321A4 /* Shuffle-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DD82F65C7DD16767457E02E1A63DC3 /* Shuffle-iOS-dummy.m */; };
+		D51D99A1C85C03D22D7CF6FE1C1E557A /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7A200BCCA1D810BAE6F8F167DEBF4 /* SwipeCard.swift */; };
+		DFE132561680134C1F0E0A3E7A06534F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		E39963B3CD1132516B637293BA63D04F /* SwipeCardStackDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CBCE8B295F256733363D92631E0C77 /* SwipeCardStackDelegate.swift */; };
+		E52C938454AD9399232B973EE5A5BF81 /* Pods-Affirm-AffirmUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66990580CCC70F66E6A2566A2A5076BA /* Pods-Affirm-AffirmUITests-dummy.m */; };
+		E640BE8FEF28C4D1788EF5FCEE629B86 /* Pods-Affirm-AffirmUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 926E802AF614065805D9EDEDE504ABFE /* Pods-Affirm-AffirmUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EADFD001AF4A19C4A3791C093574D0A7 /* TapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F0DB3065B9458DE542F64980BD59F6 /* TapGestureRecognizer.swift */; };
+		F1C3D479C36A1574C64BC3DB2AF48F99 /* CardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BDA4A070276F1B9027DBA98667D3FE /* CardAnimator.swift */; };
+		F743BA1715A0170EDCA9FA77883E713B /* CardStackStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2435CA85AD20AD77C62D45FB17783DF8 /* CardStackStateManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01512BC708B55FACAC6094C772D2ABCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CE4608D13EB4E75FE6B40D38210294E;
+			remoteInfo = "Shuffle-iOS";
+		};
+		8737A4653FD42E85874B13160F1A0759 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF474DAC077E990DFCFE148123A48492;
+			remoteInfo = "Pods-Affirm";
+		};
+		B03BE4ECBF20353404331F69057ACCB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CE4608D13EB4E75FE6B40D38210294E;
+			remoteInfo = "Shuffle-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02769A5C859596911CE499D40D138627 /* CardStackAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardStackAnimator.swift; path = Sources/Shuffle/SwipeCardStack/CardStackAnimator.swift; sourceTree = "<group>"; };
+		0C7C23FA3AB6D083551CCB188CFE45C1 /* Shuffle-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Shuffle-iOS-Info.plist"; sourceTree = "<group>"; };
+		0F604A39F6948A75EF5BD9C32C747B3F /* Shuffle-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Shuffle-iOS-prefix.pch"; sourceTree = "<group>"; };
+		11BDA4A070276F1B9027DBA98667D3FE /* CardAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardAnimator.swift; path = Sources/Shuffle/SwipeCard/CardAnimator.swift; sourceTree = "<group>"; };
+		147751C98789C5B2F7A189C8BAE9F535 /* Shuffle-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Shuffle-iOS.modulemap"; sourceTree = "<group>"; };
+		18BE7B4B41C9F48F3B33B66D12BA5CF4 /* CardStackTransformProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardStackTransformProvider.swift; path = Sources/Shuffle/SwipeCardStack/CardStackTransformProvider.swift; sourceTree = "<group>"; };
+		19978CDAD92175DDD823D39E0CDE0F79 /* SwipeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeView.swift; path = Sources/Shuffle/SwipeCard/SwipeView.swift; sourceTree = "<group>"; };
+		1A8697EDE40F76A5748D761B10C1B855 /* Pods-Affirm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Affirm.release.xcconfig"; sourceTree = "<group>"; };
+		205409EB73641B2CDDC348D588DEAB12 /* Pods-Affirm-AffirmUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Affirm-AffirmUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		243437504DB3BB98CDF1D80F78D633B2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "Sources/Shuffle/Internal/UIView+Extensions.swift"; sourceTree = "<group>"; };
+		2435CA85AD20AD77C62D45FB17783DF8 /* CardStackStateManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardStackStateManager.swift; path = Sources/Shuffle/SwipeCardStack/CardStackStateManager.swift; sourceTree = "<group>"; };
+		26EFA5D056341FE0E7B489B11D4A98C3 /* Pods-Affirm-AffirmUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Affirm-AffirmUITests-frameworks.sh"; sourceTree = "<group>"; };
+		2F4246B8733F1C65F7D7B04901B4EC1E /* Pods_Affirm_AffirmUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Affirm_AffirmUITests.framework; path = "Pods-Affirm-AffirmUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		33A57C1A9513B7663A4B98F1D5458219 /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/Shuffle/SwipeDirection.swift; sourceTree = "<group>"; };
+		49FD3B7367E8D6A0EB641F301637AE15 /* CardStackLayoutProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardStackLayoutProvider.swift; path = Sources/Shuffle/SwipeCardStack/CardStackLayoutProvider.swift; sourceTree = "<group>"; };
+		53FCC34465CFC9FB3FD28746E3501F1F /* CardStackAnimationOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardStackAnimationOptions.swift; path = Sources/Shuffle/SwipeCardStack/CardStackAnimationOptions.swift; sourceTree = "<group>"; };
+		5582C025010D9D41E093D3ED47FC88C2 /* SwipeCardStack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCardStack.swift; path = Sources/Shuffle/SwipeCardStack/SwipeCardStack.swift; sourceTree = "<group>"; };
+		5680B7F7BF438527CF292FCE613BD48A /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Sources/Shuffle/Internal/Animator.swift; sourceTree = "<group>"; };
+		59B5F53B396E93C9BBFB266F9C206C29 /* SwipeCardStackDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCardStackDataSource.swift; path = Sources/Shuffle/SwipeCardStack/SwipeCardStackDataSource.swift; sourceTree = "<group>"; };
+		60F0DB3065B9458DE542F64980BD59F6 /* TapGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TapGestureRecognizer.swift; path = Sources/Shuffle/Internal/TapGestureRecognizer.swift; sourceTree = "<group>"; };
+		66990580CCC70F66E6A2566A2A5076BA /* Pods-Affirm-AffirmUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Affirm-AffirmUITests-dummy.m"; sourceTree = "<group>"; };
+		68A062F31D58340287DAFF12781FD8DC /* CGVector+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGVector+Extensions.swift"; path = "Sources/Shuffle/Internal/CGVector+Extensions.swift"; sourceTree = "<group>"; };
+		6B09B96F5B0069CF8B8F710E07501A1B /* Pods-Affirm.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Affirm.modulemap"; sourceTree = "<group>"; };
+		6CE585BA955E23D6EC97B0DA285E7618 /* Pods-Affirm-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Affirm-Info.plist"; sourceTree = "<group>"; };
+		6D184D3E6C86567E352FFCA2DA19CDB1 /* Pods_AffirmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AffirmTests.framework; path = "Pods-AffirmTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FCE1066CD3665F0713187E28033B52B /* Pods-Affirm-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Affirm-umbrella.h"; sourceTree = "<group>"; };
+		73A7A200BCCA1D810BAE6F8F167DEBF4 /* SwipeCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCard.swift; path = Sources/Shuffle/SwipeCard/SwipeCard.swift; sourceTree = "<group>"; };
+		73B53AB8BC1170EC2EA0CCA436FAEE87 /* Pods-AffirmTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AffirmTests-Info.plist"; sourceTree = "<group>"; };
+		77D5CC00A2FFAC5FD2FEA32C78949CEF /* CardAnimationOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardAnimationOptions.swift; path = Sources/Shuffle/SwipeCard/CardAnimationOptions.swift; sourceTree = "<group>"; };
+		79F2A88C7583B7D75DB38EFA93A85DA6 /* Pods-AffirmTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AffirmTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7C7A73876462B91644FAD52378A953DD /* Pods-Affirm-AffirmUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Affirm-AffirmUITests.modulemap"; sourceTree = "<group>"; };
+		7EFA09F80C4998D4571B5EA239EE5E69 /* Pods-Affirm-AffirmUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Affirm-AffirmUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		810C2C712D294AB3B312D3412D260EFB /* Pods-Affirm-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Affirm-dummy.m"; sourceTree = "<group>"; };
+		88DB291E5114A3B390A27438021E51D8 /* Pods-AffirmTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AffirmTests.modulemap"; sourceTree = "<group>"; };
+		8BDB4C3C69D398FF9E21EB1DF32F1604 /* Pods-AffirmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AffirmTests.debug.xcconfig"; sourceTree = "<group>"; };
+		926E802AF614065805D9EDEDE504ABFE /* Pods-Affirm-AffirmUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Affirm-AffirmUITests-umbrella.h"; sourceTree = "<group>"; };
+		93EE54033A4C5FAD09E8E288363A1BAE /* Shuffle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Shuffle.h; path = Sources/Shuffle.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A8CBCE8B295F256733363D92631E0C77 /* SwipeCardStackDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCardStackDelegate.swift; path = Sources/Shuffle/SwipeCardStack/SwipeCardStackDelegate.swift; sourceTree = "<group>"; };
+		AB98E33C33F683F40EDF7F15F9F47EEB /* Pods-AffirmTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AffirmTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B184FA724A0497B3F6069256AE4EB36D /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGPoint+Extensions.swift"; path = "Sources/Shuffle/Internal/CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		B1C428458DFC9CCA8BC24BA90D642BA1 /* Shuffle-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Shuffle-iOS-umbrella.h"; sourceTree = "<group>"; };
+		B334D1B2F65DB22344A5E4759353FCEA /* StringUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringUtils.swift; path = Sources/Shuffle/Internal/StringUtils.swift; sourceTree = "<group>"; };
+		B3DD82F65C7DD16767457E02E1A63DC3 /* Shuffle-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Shuffle-iOS-dummy.m"; sourceTree = "<group>"; };
+		B61664DBEC37A9EA7FAD203EEFE0BE52 /* Pods-Affirm-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Affirm-frameworks.sh"; sourceTree = "<group>"; };
+		B8F88E7AB84E5797EDDC091C6171D37E /* Pods-AffirmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AffirmTests.release.xcconfig"; sourceTree = "<group>"; };
+		B9354A9183F45BF2E54E50C4C42FE77A /* Pods_Affirm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Affirm.framework; path = "Pods-Affirm.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCDCA64289F281133356DC59C97C1CC6 /* Pods-Affirm-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Affirm-acknowledgements.plist"; sourceTree = "<group>"; };
+		BF9B57DF148208C0770A74583B86E8D4 /* Pods-Affirm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Affirm.debug.xcconfig"; sourceTree = "<group>"; };
+		CAA7DE66F6BDAC0DB45CC3DCB86B5A29 /* CardLayoutProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardLayoutProvider.swift; path = Sources/Shuffle/SwipeCard/CardLayoutProvider.swift; sourceTree = "<group>"; };
+		CFF90C23E7665AB8418283A28AE903B7 /* Pods-Affirm-AffirmUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Affirm-AffirmUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D68B9AF01027FF91D78BDC939F21676F /* Pods-Affirm-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Affirm-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D6BC389DEDCACF70185AB580DA7A9249 /* Pods-Affirm-AffirmUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Affirm-AffirmUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DBA6E9519F3ADEA979C2AC2E2A520FD3 /* CardTransformProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardTransformProvider.swift; path = Sources/Shuffle/SwipeCard/CardTransformProvider.swift; sourceTree = "<group>"; };
+		DD0983C72E156739DD0124D622F2E7E0 /* Shuffle-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Shuffle-iOS.xcconfig"; sourceTree = "<group>"; };
+		DE65C6A8A3C90185763B645B6C8561E8 /* Pods-AffirmTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AffirmTests-umbrella.h"; sourceTree = "<group>"; };
+		E5B80E27DC5903F55A4A153553073A84 /* Pods-AffirmTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AffirmTests-dummy.m"; sourceTree = "<group>"; };
+		E9BBDFE5F1B0108F816A2F67830F730B /* SwipeCardDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCardDelegate.swift; path = Sources/Shuffle/SwipeCard/SwipeCardDelegate.swift; sourceTree = "<group>"; };
+		EA09E21A0EEA3F84D7908A2BC36BFDDB /* Array+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Extensions.swift"; path = "Sources/Shuffle/Internal/Array+Extensions.swift"; sourceTree = "<group>"; };
+		EF6D82A590C3AFFDB84FB22D5172CC1B /* Shuffle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Shuffle_iOS.framework; path = "Shuffle-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF24CF64E0DB4E78F1B627CEA1427F25 /* PanGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PanGestureRecognizer.swift; path = Sources/Shuffle/Internal/PanGestureRecognizer.swift; sourceTree = "<group>"; };
+		FF6E12284B90BE8F057AE6646DAD6635 /* Pods-Affirm-AffirmUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Affirm-AffirmUITests-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00C9D50F8598849A8A39E3E9E512678A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35DEC29CDD34B659D124A66B43086466 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		213DE3BC21B274E9DF058BAEFF6FCE06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE132561680134C1F0E0A3E7A06534F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85B94F422D095BCF93EFBC10B0C30DE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D36C691376DD9EB4D6397F1F31EC17F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BBAF09F75933657F36F2D29C671A81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FB9FF578F7C05634DAE978BE1FFA7E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FD3D5E81F091718B98CBDAB64C6E106 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B967EFD2940B92E2610AA31D9186C8F5 /* Shuffle-iOS */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		558D0B9C112CB93C61DF9D4D10F83075 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				147751C98789C5B2F7A189C8BAE9F535 /* Shuffle-iOS.modulemap */,
+				DD0983C72E156739DD0124D622F2E7E0 /* Shuffle-iOS.xcconfig */,
+				B3DD82F65C7DD16767457E02E1A63DC3 /* Shuffle-iOS-dummy.m */,
+				0C7C23FA3AB6D083551CCB188CFE45C1 /* Shuffle-iOS-Info.plist */,
+				0F604A39F6948A75EF5BD9C32C747B3F /* Shuffle-iOS-prefix.pch */,
+				B1C428458DFC9CCA8BC24BA90D642BA1 /* Shuffle-iOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Shuffle-iOS";
+			sourceTree = "<group>";
+		};
+		5DDAEFE589DC51E35FAD7DCD3CB7A19A /* Pods-Affirm-AffirmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7C7A73876462B91644FAD52378A953DD /* Pods-Affirm-AffirmUITests.modulemap */,
+				CFF90C23E7665AB8418283A28AE903B7 /* Pods-Affirm-AffirmUITests-acknowledgements.markdown */,
+				7EFA09F80C4998D4571B5EA239EE5E69 /* Pods-Affirm-AffirmUITests-acknowledgements.plist */,
+				66990580CCC70F66E6A2566A2A5076BA /* Pods-Affirm-AffirmUITests-dummy.m */,
+				26EFA5D056341FE0E7B489B11D4A98C3 /* Pods-Affirm-AffirmUITests-frameworks.sh */,
+				FF6E12284B90BE8F057AE6646DAD6635 /* Pods-Affirm-AffirmUITests-Info.plist */,
+				926E802AF614065805D9EDEDE504ABFE /* Pods-Affirm-AffirmUITests-umbrella.h */,
+				205409EB73641B2CDDC348D588DEAB12 /* Pods-Affirm-AffirmUITests.debug.xcconfig */,
+				D6BC389DEDCACF70185AB580DA7A9249 /* Pods-Affirm-AffirmUITests.release.xcconfig */,
+			);
+			name = "Pods-Affirm-AffirmUITests";
+			path = "Target Support Files/Pods-Affirm-AffirmUITests";
+			sourceTree = "<group>";
+		};
+		7C11BEB933312066BF52E143B9609D8D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C844B3826867D843E01C196F5F984A5B /* Pods-Affirm */,
+				5DDAEFE589DC51E35FAD7DCD3CB7A19A /* Pods-Affirm-AffirmUITests */,
+				E5B6AE22682B38897A85B20761AFF1B8 /* Pods-AffirmTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B967EFD2940B92E2610AA31D9186C8F5 /* Shuffle-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5680B7F7BF438527CF292FCE613BD48A /* Animator.swift */,
+				EA09E21A0EEA3F84D7908A2BC36BFDDB /* Array+Extensions.swift */,
+				77D5CC00A2FFAC5FD2FEA32C78949CEF /* CardAnimationOptions.swift */,
+				11BDA4A070276F1B9027DBA98667D3FE /* CardAnimator.swift */,
+				CAA7DE66F6BDAC0DB45CC3DCB86B5A29 /* CardLayoutProvider.swift */,
+				53FCC34465CFC9FB3FD28746E3501F1F /* CardStackAnimationOptions.swift */,
+				02769A5C859596911CE499D40D138627 /* CardStackAnimator.swift */,
+				49FD3B7367E8D6A0EB641F301637AE15 /* CardStackLayoutProvider.swift */,
+				2435CA85AD20AD77C62D45FB17783DF8 /* CardStackStateManager.swift */,
+				18BE7B4B41C9F48F3B33B66D12BA5CF4 /* CardStackTransformProvider.swift */,
+				DBA6E9519F3ADEA979C2AC2E2A520FD3 /* CardTransformProvider.swift */,
+				B184FA724A0497B3F6069256AE4EB36D /* CGPoint+Extensions.swift */,
+				68A062F31D58340287DAFF12781FD8DC /* CGVector+Extensions.swift */,
+				FF24CF64E0DB4E78F1B627CEA1427F25 /* PanGestureRecognizer.swift */,
+				93EE54033A4C5FAD09E8E288363A1BAE /* Shuffle.h */,
+				B334D1B2F65DB22344A5E4759353FCEA /* StringUtils.swift */,
+				73A7A200BCCA1D810BAE6F8F167DEBF4 /* SwipeCard.swift */,
+				E9BBDFE5F1B0108F816A2F67830F730B /* SwipeCardDelegate.swift */,
+				5582C025010D9D41E093D3ED47FC88C2 /* SwipeCardStack.swift */,
+				59B5F53B396E93C9BBFB266F9C206C29 /* SwipeCardStackDataSource.swift */,
+				A8CBCE8B295F256733363D92631E0C77 /* SwipeCardStackDelegate.swift */,
+				33A57C1A9513B7663A4B98F1D5458219 /* SwipeDirection.swift */,
+				19978CDAD92175DDD823D39E0CDE0F79 /* SwipeView.swift */,
+				60F0DB3065B9458DE542F64980BD59F6 /* TapGestureRecognizer.swift */,
+				243437504DB3BB98CDF1D80F78D633B2 /* UIView+Extensions.swift */,
+				558D0B9C112CB93C61DF9D4D10F83075 /* Support Files */,
+			);
+			name = "Shuffle-iOS";
+			path = "Shuffle-iOS";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C844B3826867D843E01C196F5F984A5B /* Pods-Affirm */ = {
+			isa = PBXGroup;
+			children = (
+				6B09B96F5B0069CF8B8F710E07501A1B /* Pods-Affirm.modulemap */,
+				D68B9AF01027FF91D78BDC939F21676F /* Pods-Affirm-acknowledgements.markdown */,
+				BCDCA64289F281133356DC59C97C1CC6 /* Pods-Affirm-acknowledgements.plist */,
+				810C2C712D294AB3B312D3412D260EFB /* Pods-Affirm-dummy.m */,
+				B61664DBEC37A9EA7FAD203EEFE0BE52 /* Pods-Affirm-frameworks.sh */,
+				6CE585BA955E23D6EC97B0DA285E7618 /* Pods-Affirm-Info.plist */,
+				6FCE1066CD3665F0713187E28033B52B /* Pods-Affirm-umbrella.h */,
+				BF9B57DF148208C0770A74583B86E8D4 /* Pods-Affirm.debug.xcconfig */,
+				1A8697EDE40F76A5748D761B10C1B855 /* Pods-Affirm.release.xcconfig */,
+			);
+			name = "Pods-Affirm";
+			path = "Target Support Files/Pods-Affirm";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				2FD3D5E81F091718B98CBDAB64C6E106 /* Pods */,
+				DB99F62D0DE07D3F5E2814ECDB107936 /* Products */,
+				7C11BEB933312066BF52E143B9609D8D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB99F62D0DE07D3F5E2814ECDB107936 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9354A9183F45BF2E54E50C4C42FE77A /* Pods_Affirm.framework */,
+				2F4246B8733F1C65F7D7B04901B4EC1E /* Pods_Affirm_AffirmUITests.framework */,
+				6D184D3E6C86567E352FFCA2DA19CDB1 /* Pods_AffirmTests.framework */,
+				EF6D82A590C3AFFDB84FB22D5172CC1B /* Shuffle_iOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5B6AE22682B38897A85B20761AFF1B8 /* Pods-AffirmTests */ = {
+			isa = PBXGroup;
+			children = (
+				88DB291E5114A3B390A27438021E51D8 /* Pods-AffirmTests.modulemap */,
+				AB98E33C33F683F40EDF7F15F9F47EEB /* Pods-AffirmTests-acknowledgements.markdown */,
+				79F2A88C7583B7D75DB38EFA93A85DA6 /* Pods-AffirmTests-acknowledgements.plist */,
+				E5B80E27DC5903F55A4A153553073A84 /* Pods-AffirmTests-dummy.m */,
+				73B53AB8BC1170EC2EA0CCA436FAEE87 /* Pods-AffirmTests-Info.plist */,
+				DE65C6A8A3C90185763B645B6C8561E8 /* Pods-AffirmTests-umbrella.h */,
+				8BDB4C3C69D398FF9E21EB1DF32F1604 /* Pods-AffirmTests.debug.xcconfig */,
+				B8F88E7AB84E5797EDDC091C6171D37E /* Pods-AffirmTests.release.xcconfig */,
+			);
+			name = "Pods-AffirmTests";
+			path = "Target Support Files/Pods-AffirmTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		32F6FC439C77E6AD4CFD1C4A4DC733F9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DCE1C5299CD365B28E5C0F914277E9C /* Pods-AffirmTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		661A64D38B836AE736D2C61265DBA4AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07585A664B2EE3F2C5A5147AFEB30661 /* Pods-Affirm-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3C00913F4F9FF975F86BB80FF43E60D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B47D64FDF36C8155ECD5CE88BE4ED589 /* Shuffle-iOS-umbrella.h in Headers */,
+				37F3F93D2F9B391DC6989E2F7A645ED5 /* Shuffle.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED62C3CE0A08118570EE43476BF35C1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E640BE8FEF28C4D1788EF5FCEE629B86 /* Pods-Affirm-AffirmUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1407597976A70B5F325EBBED5AAAE14D /* Pods-Affirm-AffirmUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14B8CA59C1C7F12DF7468F87948E0FEE /* Build configuration list for PBXNativeTarget "Pods-Affirm-AffirmUITests" */;
+			buildPhases = (
+				ED62C3CE0A08118570EE43476BF35C1C /* Headers */,
+				7352843C11E69EBF6FA39936BBE4B56D /* Sources */,
+				213DE3BC21B274E9DF058BAEFF6FCE06 /* Frameworks */,
+				A40932C08EE354CFA99245B282026686 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B377AE51230ABA848EEDD752CD8C0D94 /* PBXTargetDependency */,
+			);
+			name = "Pods-Affirm-AffirmUITests";
+			productName = "Pods-Affirm-AffirmUITests";
+			productReference = 2F4246B8733F1C65F7D7B04901B4EC1E /* Pods_Affirm_AffirmUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6CE4608D13EB4E75FE6B40D38210294E /* Shuffle-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 412D998F3CC641AD2D304C9E203DE2B6 /* Build configuration list for PBXNativeTarget "Shuffle-iOS" */;
+			buildPhases = (
+				D3C00913F4F9FF975F86BB80FF43E60D /* Headers */,
+				4FB55CA4B826F1ABD23C542139DAF362 /* Sources */,
+				00C9D50F8598849A8A39E3E9E512678A /* Frameworks */,
+				FBB173E3F3AF0E4E0ACB03D43E0CE096 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Shuffle-iOS";
+			productName = "Shuffle-iOS";
+			productReference = EF6D82A590C3AFFDB84FB22D5172CC1B /* Shuffle_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7EC3770DF0F2D9D98E9FD5A7190AEA27 /* Pods-AffirmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F5B37302CAB5599F268A7B2B5AED868 /* Build configuration list for PBXNativeTarget "Pods-AffirmTests" */;
+			buildPhases = (
+				32F6FC439C77E6AD4CFD1C4A4DC733F9 /* Headers */,
+				1B1B1E519BE2F1923D00FC801439C1CA /* Sources */,
+				85B94F422D095BCF93EFBC10B0C30DE5 /* Frameworks */,
+				CF51AB70B4A440BFE52602387B1F7F6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56C4624BCC2662181B5F8F0DC3E2227D /* PBXTargetDependency */,
+			);
+			name = "Pods-AffirmTests";
+			productName = "Pods-AffirmTests";
+			productReference = 6D184D3E6C86567E352FFCA2DA19CDB1 /* Pods_AffirmTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DF474DAC077E990DFCFE148123A48492 /* Pods-Affirm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C05E220E1DB1DBF4CE42A0D8A9006AEE /* Build configuration list for PBXNativeTarget "Pods-Affirm" */;
+			buildPhases = (
+				661A64D38B836AE736D2C61265DBA4AA /* Headers */,
+				FC8AB323B8456AE84B10010EF08E4A11 /* Sources */,
+				C2BBAF09F75933657F36F2D29C671A81 /* Frameworks */,
+				43AA6185550D6CA60072E7191572AC24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6CAEB6F90CBF1FFBD078DD6E7A59098 /* PBXTargetDependency */,
+			);
+			name = "Pods-Affirm";
+			productName = "Pods-Affirm";
+			productReference = B9354A9183F45BF2E54E50C4C42FE77A /* Pods_Affirm.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = DB99F62D0DE07D3F5E2814ECDB107936 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF474DAC077E990DFCFE148123A48492 /* Pods-Affirm */,
+				1407597976A70B5F325EBBED5AAAE14D /* Pods-Affirm-AffirmUITests */,
+				7EC3770DF0F2D9D98E9FD5A7190AEA27 /* Pods-AffirmTests */,
+				6CE4608D13EB4E75FE6B40D38210294E /* Shuffle-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43AA6185550D6CA60072E7191572AC24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A40932C08EE354CFA99245B282026686 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF51AB70B4A440BFE52602387B1F7F6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB173E3F3AF0E4E0ACB03D43E0CE096 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B1B1E519BE2F1923D00FC801439C1CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67183DBEDE814A86F7B424CFE5AF6F1A /* Pods-AffirmTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FB55CA4B826F1ABD23C542139DAF362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4843EF056BB1A5A6A0E282BDF6705ED /* Animator.swift in Sources */,
+				3EF43A27DC8EC1A11270920606C4FB93 /* Array+Extensions.swift in Sources */,
+				6637C7BE6C09A76268A5EB00CDB5486F /* CardAnimationOptions.swift in Sources */,
+				F1C3D479C36A1574C64BC3DB2AF48F99 /* CardAnimator.swift in Sources */,
+				BAFE4E4A557366800E8CA4DE37937798 /* CardLayoutProvider.swift in Sources */,
+				A6D43D352ACDE0C44641DA912206DAB8 /* CardStackAnimationOptions.swift in Sources */,
+				76D64CE4AB2C9274A6AC1C07DEB9FD54 /* CardStackAnimator.swift in Sources */,
+				0FC7714476E9023AA58EA1D3D612711D /* CardStackLayoutProvider.swift in Sources */,
+				F743BA1715A0170EDCA9FA77883E713B /* CardStackStateManager.swift in Sources */,
+				078A81162246BC7B2A5C94103B630BCA /* CardStackTransformProvider.swift in Sources */,
+				003D0849238C84847D849C9D1E131D90 /* CardTransformProvider.swift in Sources */,
+				B2C4CB5C014E070B5E249DBA815211CB /* CGPoint+Extensions.swift in Sources */,
+				8C504F7CDC715DC2CEB87E9E00AAA0E6 /* CGVector+Extensions.swift in Sources */,
+				0B23AB476565EF7E8B5D70405A832FDA /* PanGestureRecognizer.swift in Sources */,
+				BF710E38993571FD049C2181722321A4 /* Shuffle-iOS-dummy.m in Sources */,
+				7B0DB0A39270B8C27DAE80EAF87FF1F2 /* StringUtils.swift in Sources */,
+				D51D99A1C85C03D22D7CF6FE1C1E557A /* SwipeCard.swift in Sources */,
+				95C66BE7B914BF18CDBC286798AB3918 /* SwipeCardDelegate.swift in Sources */,
+				08405585CE27C43F7FB97998BEF23B49 /* SwipeCardStack.swift in Sources */,
+				B18FA055160CC5AB09B3B19739220EEF /* SwipeCardStackDataSource.swift in Sources */,
+				E39963B3CD1132516B637293BA63D04F /* SwipeCardStackDelegate.swift in Sources */,
+				00111E4C5E56E2077770FDCE31FDB47A /* SwipeDirection.swift in Sources */,
+				241D9FE649B9726C97674131B998A0CE /* SwipeView.swift in Sources */,
+				EADFD001AF4A19C4A3791C093574D0A7 /* TapGestureRecognizer.swift in Sources */,
+				980FE0662CD63F48195F15C1ACCA7C76 /* UIView+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7352843C11E69EBF6FA39936BBE4B56D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E52C938454AD9399232B973EE5A5BF81 /* Pods-Affirm-AffirmUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC8AB323B8456AE84B10010EF08E4A11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0427E8573A16B24C2BCD92D8C1F8068F /* Pods-Affirm-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56C4624BCC2662181B5F8F0DC3E2227D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Affirm";
+			target = DF474DAC077E990DFCFE148123A48492 /* Pods-Affirm */;
+			targetProxy = 8737A4653FD42E85874B13160F1A0759 /* PBXContainerItemProxy */;
+		};
+		B377AE51230ABA848EEDD752CD8C0D94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Shuffle-iOS";
+			target = 6CE4608D13EB4E75FE6B40D38210294E /* Shuffle-iOS */;
+			targetProxy = B03BE4ECBF20353404331F69057ACCB0 /* PBXContainerItemProxy */;
+		};
+		B6CAEB6F90CBF1FFBD078DD6E7A59098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Shuffle-iOS";
+			target = 6CE4608D13EB4E75FE6B40D38210294E /* Shuffle-iOS */;
+			targetProxy = 01512BC708B55FACAC6094C772D2ABCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		065EF94051D2C73BBFB864C8B4EC78E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF9B57DF148208C0770A74583B86E8D4 /* Pods-Affirm.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Affirm/Pods-Affirm-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Affirm/Pods-Affirm.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0F56C2B66E449DF6BD39B5AB49BBDEB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BDB4C3C69D398FF9E21EB1DF32F1604 /* Pods-AffirmTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AffirmTests/Pods-AffirmTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AffirmTests/Pods-AffirmTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		47575F5974CADA24DE580B5F88815F56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD0983C72E156739DD0124D622F2E7E0 /* Shuffle-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Shuffle-iOS/Shuffle-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Shuffle-iOS/Shuffle-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Shuffle-iOS/Shuffle-iOS.modulemap";
+				PRODUCT_MODULE_NAME = Shuffle_iOS;
+				PRODUCT_NAME = Shuffle_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6C61D818ACD3C2C116FED6A9C67E91B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6DC05BCB310384BB683B052B5CBB103A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6BC389DEDCACF70185AB580DA7A9249 /* Pods-Affirm-AffirmUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Affirm-AffirmUITests/Pods-Affirm-AffirmUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Affirm-AffirmUITests/Pods-Affirm-AffirmUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7DC5F11AFBEAE473E8D3C24A2D11338D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C5CC80888EA4D1926870BE81ECC4B32E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD0983C72E156739DD0124D622F2E7E0 /* Shuffle-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Shuffle-iOS/Shuffle-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Shuffle-iOS/Shuffle-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Shuffle-iOS/Shuffle-iOS.modulemap";
+				PRODUCT_MODULE_NAME = Shuffle_iOS;
+				PRODUCT_NAME = Shuffle_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CE44354A645EE7783C59174BEB2A22B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A8697EDE40F76A5748D761B10C1B855 /* Pods-Affirm.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Affirm/Pods-Affirm-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Affirm/Pods-Affirm.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D3A3BAEEF780A19F2F64191B9E2A49C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 205409EB73641B2CDDC348D588DEAB12 /* Pods-Affirm-AffirmUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Affirm-AffirmUITests/Pods-Affirm-AffirmUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Affirm-AffirmUITests/Pods-Affirm-AffirmUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ECB3F3B8118FA2333D218F73C16380B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8F88E7AB84E5797EDDC091C6171D37E /* Pods-AffirmTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AffirmTests/Pods-AffirmTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AffirmTests/Pods-AffirmTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14B8CA59C1C7F12DF7468F87948E0FEE /* Build configuration list for PBXNativeTarget "Pods-Affirm-AffirmUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3A3BAEEF780A19F2F64191B9E2A49C5 /* Debug */,
+				6DC05BCB310384BB683B052B5CBB103A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		412D998F3CC641AD2D304C9E203DE2B6 /* Build configuration list for PBXNativeTarget "Shuffle-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47575F5974CADA24DE580B5F88815F56 /* Debug */,
+				C5CC80888EA4D1926870BE81ECC4B32E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C61D818ACD3C2C116FED6A9C67E91B4 /* Debug */,
+				7DC5F11AFBEAE473E8D3C24A2D11338D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F5B37302CAB5599F268A7B2B5AED868 /* Build configuration list for PBXNativeTarget "Pods-AffirmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F56C2B66E449DF6BD39B5AB49BBDEB7 /* Debug */,
+				ECB3F3B8118FA2333D218F73C16380B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C05E220E1DB1DBF4CE42A0D8A9006AEE /* Build configuration list for PBXNativeTarget "Pods-Affirm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				065EF94051D2C73BBFB864C8B4EC78E3 /* Debug */,
+				CE44354A645EE7783C59174BEB2A22B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

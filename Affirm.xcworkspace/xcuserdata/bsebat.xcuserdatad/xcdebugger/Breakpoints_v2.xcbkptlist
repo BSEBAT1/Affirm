@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B51F3D9B-2DCC-4108-995D-F5314BD22CE6"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E6FEDE5-97C7-4DC1-B576-F3598C55007B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirm/WebServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "fetchYelpData(withLocation:withOffset:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0E6FEDE5-97C7-4DC1-B576-F3598C55007B - f626b3b4e899cac7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Affirm.WebServices.fetchYelpData(withLocation: __C.CLLocation, withOffset: Swift.Int, completion: (Swift.Optional&lt;Swift.Array&lt;Affirm.CardModel&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Affirm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bsebat/Desktop/Affirm/Affirm/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1754">
+               </Location>
+               <Location
+                  uuid = "0E6FEDE5-97C7-4DC1-B576-F3598C55007B - c4f5f901b4cfe2c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Affirm.WebServices.fetchYelpData(withLocation: __C.CLLocation, withOffset: Swift.Int, completion: (Swift.Optional&lt;Swift.Array&lt;Affirm.CardModel&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Affirm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bsebat/Desktop/Affirm/Affirm/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "562">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B978E9A0-3F87-4153-9201-7E894D5E6E86"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirm/WebServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "fetchYelpData(withLocation:withOffset:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
