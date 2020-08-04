@@ -20,30 +20,44 @@ class ViewController: UIViewController {
     private let webservices = WebServices.init()
     private var cardData = [CardModel]()
     private let label = UILabel.init()
+    private let searchBar = UISearchBar.init()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         layoutButtonStackView()
+        addSearchBar()
         layoutCardStackView()
         cardStack.delegate = self
         cardStack.dataSource = self
         buttons.delegate = self
+        searchBar.delegate = self
         checkLocationStatus()
         addWarningLabel()
     }
     // MARK: - Configuration -
     private func addWarningLabel() {
-              view.addSubview(label)
-              label.text = " We Need Location Authorization to Load Cards"
-              label.anchor(top: view.safeAreaLayoutGuide.topAnchor,
-              left: view.safeAreaLayoutGuide.leftAnchor,
-              bottom: view.safeAreaLayoutGuide.bottomAnchor,
-              right: view.safeAreaLayoutGuide.rightAnchor)
+        view.addSubview(label)
+        label.text = " We Need Location Authorization to Load Cards"
+        label.anchor(top: view.safeAreaLayoutGuide.topAnchor,
+                     left: view.safeAreaLayoutGuide.leftAnchor,
+                     bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                     right: view.safeAreaLayoutGuide.rightAnchor)
+    }
+    
+    private func addSearchBar() {
+        view.addSubview(searchBar)
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        let views = ["searchBar": searchBar]
+        let widthConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-[searchBar]-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views)
+        let heightConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-[searchBar(50)]", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views)
+        NSLayoutConstraint.activate(widthConstraints)
+        NSLayoutConstraint.activate(heightConstraints)
     }
     
     private func layoutCardStackView() {
         view.addSubview(cardStack)
-        cardStack.anchor(top: view.safeAreaLayoutGuide.topAnchor,
+        cardStack.anchor(top: searchBar.bottomAnchor,
                          left: view.safeAreaLayoutGuide.leftAnchor,
                          bottom: buttons.topAnchor,
                          right: view.safeAreaLayoutGuide.rightAnchor)
@@ -72,6 +86,42 @@ class ViewController: UIViewController {
             askForLocationPermissions()
         }
     }
+    
+    private func apiService(_ term: String = "restaurants") {
+        var offset = cardData.count
+        if term != webservices.term {
+            offset = 0
+        }
+        webservices.fetchYelpData(withTerm: term, withLocation: prevLocation, withOffset:offset) {[weak self] (data, error) in
+            guard let strongSelf = self else {return}
+            if let error = error {
+                strongSelf.hanldeErrors(error: error)
+            } else {
+                if let data = data {
+                    if term != "restaurants"{
+                        DispatchQueue.main.async {
+                            for card in data {
+                            strongSelf.cardData.insert(card, at: 0)
+                            strongSelf.cardStack.insertCard(atIndex: 0, position: 0)
+                            }
+                        strongSelf.cardStack.reloadData()
+                        }
+                    } else {
+                        let prevCount = strongSelf.cardData.count
+                        let newCount = prevCount + data.count
+                        DispatchQueue.main.async {
+                        strongSelf.cardData.append(contentsOf: data)
+                        strongSelf.cardStack.appendCards(atIndices:Array(prevCount..<newCount))
+                        strongSelf.label.isHidden = true
+                            
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
     // MARK: - Error Handling -
     private func askForLocationPermissions() {
         
@@ -83,7 +133,6 @@ class ViewController: UIViewController {
             if UIApplication.shared.canOpenURL(settingsUrl) {
                 UIApplication.shared.open(settingsUrl, completionHandler: { (success) in })
             }
-            
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         alertController.addAction(cancelAction)
@@ -116,24 +165,14 @@ extension ViewController: SwipeCardStackDelegate, SwipeCardStackDataSource {
     func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {
         
         if cardStack.numberOfRemainingCards() == 0 {
-            webservices.fetchYelpData(withLocation: prevLocation, withOffset:cardData.count) {[weak self] (data, error) in
-                guard let strongSelf = self else {return}
-                if let error = error {
-                    strongSelf.hanldeErrors(error: error)
-                } else {
-                    if let data = data {
-                        let prevCount = strongSelf.cardData.count
-                        let newCount = prevCount + data.count
-                        DispatchQueue.main.async {
-                            strongSelf.cardData.append(contentsOf: data)
-                            strongSelf.cardStack.appendCards(atIndices:Array(prevCount..<newCount))
-                        }
-                        
-                    }
-                }
-            }
+            apiService()
         }
     }
+    
+    func cardStack(_ cardStack: SwipeCardStack, didSelectCardAt index: Int) {
+        searchBar.endEditing(true)
+    }
+    
     
     func numberOfCards(in cardStack: SwipeCardStack) -> Int {
         return cardData.count
@@ -147,18 +186,7 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let last = locations.last {
             if last.coordinate.latitude != prevLocation.coordinate.latitude, last.coordinate.longitude != prevLocation.coordinate.longitude {
-                webservices.fetchYelpData(withLocation: last, withOffset: 0) {[weak self] (data, error) in
-                    guard let strongSelf = self else { return }
-                    if let error = error {
-                        strongSelf.hanldeErrors(error: error)
-                    } else if let data = data {
-                        DispatchQueue.main.async {
-                            strongSelf.label.isHidden = true
-                            strongSelf.cardData.append(contentsOf: data)
-                            strongSelf.cardStack.appendCards(atIndices:Array(0..<data.count))
-                        }
-                    }
-                }
+                apiService()
                 prevLocation = last
             }
         }
@@ -172,7 +200,23 @@ extension ViewController: ButtonStackViewDelegate {
         if button.tag == 2 {
             self.cardStack.swipe(.left, animated: true)
         } else {
-           self.cardStack.undoLastSwipe(animated: true)
+            self.cardStack.undoLastSwipe(animated: true)
         }
     }
+}
+
+extension ViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let text = searchBar.text {
+            apiService(text)
+        }
+    }
+    
+    
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+    
 }

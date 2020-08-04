@@ -39,49 +39,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "84129DD6-12A1-4A40-9768-30DB9A4E5C7F"
+            uuid = "191A5DC9-A42C-4545-AE0A-E945AADD06B4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/Shuffle-iOS/Sources/Shuffle/SwipeCardStack/SwipeCardStack.swift"
+            filePath = "Affirm/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "376"
-            endingLineNumber = "376"
-            landmarkName = "appendCards(atIndices:)"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "apiService(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BFCE1CD8-5054-4EC7-81F9-FD13F3143481"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Affirm/Networking/WebServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "fetchYelpData(withLocation:withOffset:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FD3221F5-C913-4C60-9688-487B0C8973F4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Affirm/Networking/WebServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "fetchYelpData(withLocation:withOffset:completion:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "191A5DC9-A42C-4545-AE0A-E945AADD06B4 - e1ef2dd6f7f71953"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;Affirm.CardModel&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in Affirm.ViewController.(apiService in _573D55F4413754AC94D5E758BCE2FEA2)(Swift.String) -&gt; ()"
+                  moduleName = "Affirm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bsebat/Desktop/Affirm/Affirm/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "830">
+               </Location>
+               <Location
+                  uuid = "191A5DC9-A42C-4545-AE0A-E945AADD06B4 - b755cfa87c596556"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Swift.Array&lt;Affirm.CardModel&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in Affirm.ViewController.(apiService in _573D55F4413754AC94D5E758BCE2FEA2)(Swift.String) -&gt; ()"
+                  moduleName = "Affirm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bsebat/Desktop/Affirm/Affirm/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
