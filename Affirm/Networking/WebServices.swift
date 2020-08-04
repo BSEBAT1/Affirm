@@ -14,13 +14,12 @@ class WebServices {
     // MARK: - Private Properties -
     
     private var session = URLSession.shared
-    private var modelArray = [CardModel]()
     
     // MARK: - API Calls -
     
     func fetchYelpData(withLocation:CLLocation, withOffset:Int, completion: @escaping (_ data:[CardModel]?, _ failure:String?) -> ()) {
         
-        let rawURLString = "https://api.yelp.com/v3/businesses/search?offset=\(withOffset)&latitude=\(withLocation.coordinate.latitude)&longitude=\(withLocation.coordinate.longitude)"
+        let rawURLString = "https://api.yelp.com/v3/businesses/search?limit=20&offset=\(withOffset)&latitude=\(withLocation.coordinate.latitude)&longitude=\(withLocation.coordinate.longitude)"
         
         guard let url = URL.init(string:rawURLString) else {return}
         
@@ -36,8 +35,6 @@ class WebServices {
 
        let task = session.dataTask(with: request) {[weak self] (data, response, error) in
          
-        guard let strongSelf = self else { return }
-        
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
             completion(nil,"unable to connect to server")
             return
@@ -57,15 +54,17 @@ class WebServices {
                 guard let jsonData = json["businesses"] as? [Any] else {
                     completion(nil,"error parsing json data")
                     return}
+                var modelArray = [CardModel]()
                 for obj in jsonData {
                     // I should have used a codable here but I ran out of time.
                     if let dictonary = obj as? [String:Any] {
                         if let name = dictonary["name"] as? String, let rating = dictonary["rating"] as? Double,  let imageUrl = dictonary["image_url"] as? String {
-                            strongSelf.modelArray.append(CardModel.init(name: name, rating: String(rating), imageUrl: imageUrl))
+                            modelArray.append(CardModel.init(name: name, rating: String(rating), imageUrl: imageUrl))
+                            
                         }
                     }
                 }
-                completion(strongSelf.modelArray,nil)
+                completion(modelArray,nil)
             } else {
                 completion(nil,"error parsing json data")
             }

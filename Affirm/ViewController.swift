@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     private var prevLocation = CLLocation()
     private let webservices = WebServices.init()
     private var cardData = [CardModel]()
-    private var swipeCount = 0
     private let label = UILabel.init()
     
     override func viewDidLoad() {
@@ -114,9 +113,32 @@ extension ViewController: SwipeCardStackDelegate, SwipeCardStackDataSource {
         return card
     }
     
+    func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {
+        
+        if cardStack.numberOfRemainingCards() == 0 {
+            webservices.fetchYelpData(withLocation: prevLocation, withOffset:cardData.count) {[weak self] (data, error) in
+                guard let strongSelf = self else {return}
+                if let error = error {
+                    strongSelf.hanldeErrors(error: error)
+                } else {
+                    if let data = data {
+                        let prevCount = strongSelf.cardData.count
+                        let newCount = prevCount + data.count
+                        DispatchQueue.main.async {
+                            strongSelf.cardData.append(contentsOf: data)
+                            strongSelf.cardStack.appendCards(atIndices:Array(prevCount..<newCount))
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    
     func numberOfCards(in cardStack: SwipeCardStack) -> Int {
         return cardData.count
     }
+    
 }
 
 // MARK: - Location Manager Delegates -
@@ -148,30 +170,9 @@ extension ViewController: ButtonStackViewDelegate {
     
     func didTapButton(button: UIButton) {
         if button.tag == 2 {
-            cardStack.swipe(.left, animated: true)
-            swipeCount += 1
-            if swipeCount % 10 == 0 {
-                webservices.fetchYelpData(withLocation: prevLocation, withOffset:cardData.count) {[weak self] (data, error) in
-                    guard let strongSelf = self else {return}
-                    if let error = error {
-                        strongSelf.hanldeErrors(error: error)
-                    } else {
-                        if let data = data {
-                            DispatchQueue.main.async {
-                                let prevCount = strongSelf.cardData.count
-                                let newCount = prevCount + data.count
-                                strongSelf.cardData.append(contentsOf: data)
-                                strongSelf.cardStack.appendCards(atIndices:Array(prevCount..<newCount))
-                            }
-                        }
-                    }
-                }
-            }
+            self.cardStack.swipe(.left, animated: true)
         } else {
-            cardStack.undoLastSwipe(animated: true)
-            if swipeCount > 0 {
-                swipeCount -= 1
-            }
+           self.cardStack.undoLastSwipe(animated: true)
         }
     }
 }
