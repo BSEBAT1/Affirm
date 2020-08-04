@@ -11,22 +11,26 @@ import CoreLocation
 
 class WebServices {
     
-    // MARK: - Public Properties -
-    
-    public var term = "restaurants"
-    
     // MARK: - Private Properties -
     
     private var session = URLSession.shared
+    private var previouSearch = "restaurants"
     
     // MARK: - API Calls -
     
-    func fetchYelpData(withTerm:String, withLocation:CLLocation,withOffset:Int, completion: @escaping (_ data:[CardModel]?, _ failure:String?) -> ()) {
+    func fetchYelpData(withTerm:String?, withLocation:CLLocation,withOffset:Int, completion: @escaping (_ data:[CardModel]?, _ failure:String?) -> ()) {
         
-        term = withTerm
+        let term = withTerm ?? previouSearch
+        
+        var offSet = withOffset
+        
+        if previouSearch != term {
+            offSet = 0
+            previouSearch = term
+        }
         let cleanTerm = String(term.filter { !" \n\t\r".contains($0) })
         
-        let rawURLString = "https://api.yelp.com/v3/businesses/search?limit=20&offset=\(withOffset)&latitude=\(withLocation.coordinate.latitude)&longitude=\(withLocation.coordinate.longitude)&term=\(cleanTerm)"
+        let rawURLString = "https://api.yelp.com/v3/businesses/search?limit=20&offset=\(offSet)&latitude=\(withLocation.coordinate.latitude)&longitude=\(withLocation.coordinate.longitude)&term=\(cleanTerm)"
         
         guard let url = URL.init(string:rawURLString) else {return}
         

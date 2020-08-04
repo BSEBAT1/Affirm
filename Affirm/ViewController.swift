@@ -21,8 +21,7 @@ class ViewController: UIViewController {
     private var cardData = [CardModel]()
     private let label = UILabel.init()
     private let searchBar = UISearchBar.init()
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         layoutButtonStackView()
@@ -87,24 +86,18 @@ class ViewController: UIViewController {
         }
     }
     
-    private func apiService(_ term: String = "restaurants") {
-        var offset = cardData.count
-        if term != webservices.term {
-            offset = 0
-        }
-        webservices.fetchYelpData(withTerm: term, withLocation: prevLocation, withOffset:offset) {[weak self] (data, error) in
+    private func apiService(_ term: String? = nil) {
+        
+        webservices.fetchYelpData(withTerm: term, withLocation: prevLocation, withOffset:cardData.count) {[weak self] (data, error) in
             guard let strongSelf = self else {return}
             if let error = error {
                 strongSelf.hanldeErrors(error: error)
             } else {
                 if let data = data {
-                    if term != "restaurants"{
+                    if let _ = term {
                         DispatchQueue.main.async {
-                            for card in data {
-                            strongSelf.cardData.insert(card, at: 0)
-                            strongSelf.cardStack.insertCard(atIndex: 0, position: 0)
-                            }
-                        strongSelf.cardStack.reloadData()
+                            strongSelf.cardData = data
+                            strongSelf.cardStack.reloadData()
                         }
                     } else {
                         let prevCount = strongSelf.cardData.count
@@ -113,7 +106,6 @@ class ViewController: UIViewController {
                         strongSelf.cardData.append(contentsOf: data)
                         strongSelf.cardStack.appendCards(atIndices:Array(prevCount..<newCount))
                         strongSelf.label.isHidden = true
-                            
                         }
                     }
                 }
