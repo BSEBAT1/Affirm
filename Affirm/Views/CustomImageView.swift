@@ -4,7 +4,7 @@
 //
 //  Created by Berkay Sebat on 8/3/20.
 //  Copyright © 2020 Affirm. All rights reserved.
-//
+// I use this class for a lot of my projects. Its an custom Image loading class so I dont have to deal with the headache of loading in seperate classes. Just use this for everything.
 
 import UIKit
 import Foundation

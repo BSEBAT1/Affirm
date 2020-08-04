@@ -4,7 +4,7 @@
 //
 //  Created by Berkay Sebat on 8/3/20.
 //  Copyright © 2020 Affirm. All rights reserved.
-// This is the main ViewController. It is responsible for setting up and presenting card Views. I used a cocoapod called Shuffle because I do not have the time to make all the swipable views and animations that are required. I have used Shuffle in the past and I like it. 
+// This is the main ViewController. It is responsible for setting up and presenting card Views. I used a cocoapod called Shuffle because I do not have the time to make all the swipable views and animations that are required. I have used Shuffle in the past and I like it. With more time I would have moved more of the business logic out of here.
 
 import UIKit
 import Shuffle_iOS
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     private let webservices = WebServices.init()
     private var cardData = [CardModel]()
     private var swipeCount = 0
+    private let label = UILabel.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,23 +29,34 @@ class ViewController: UIViewController {
         cardStack.dataSource = self
         buttons.delegate = self
         checkLocationStatus()
+        addWarningLabel()
+    }
+    
+    private func addWarningLabel() {
+              view.addSubview(label)
+              label.text = " We Need Location Authorization to Load Cards"
+              label.anchor(top: view.safeAreaLayoutGuide.topAnchor,
+              left: view.safeAreaLayoutGuide.leftAnchor,
+              bottom: view.safeAreaLayoutGuide.bottomAnchor,
+              right: view.safeAreaLayoutGuide.rightAnchor)
     }
     
     private func layoutCardStackView() {
-      view.addSubview(cardStack)
-      cardStack.anchor(top: view.safeAreaLayoutGuide.topAnchor,
-                       left: view.safeAreaLayoutGuide.leftAnchor,
-                       bottom: buttons.topAnchor,
-                       right: view.safeAreaLayoutGuide.rightAnchor)
+        view.addSubview(cardStack)
+        cardStack.anchor(top: view.safeAreaLayoutGuide.topAnchor,
+                         left: view.safeAreaLayoutGuide.leftAnchor,
+                         bottom: buttons.topAnchor,
+                         right: view.safeAreaLayoutGuide.rightAnchor)
     }
+    
     private func layoutButtonStackView() {
-      view.addSubview(buttons)
-      buttons.anchor(left: view.safeAreaLayoutGuide.leftAnchor,
-                             bottom: view.safeAreaLayoutGuide.bottomAnchor,
-                             right: view.safeAreaLayoutGuide.rightAnchor,
-                             paddingLeft: 24,
-                             paddingBottom: 12,
-                             paddingRight: 24)
+        view.addSubview(buttons)
+        buttons.anchor(left: view.safeAreaLayoutGuide.leftAnchor,
+                       bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                       right: view.safeAreaLayoutGuide.rightAnchor,
+                       paddingLeft: 24,
+                       paddingBottom: 12,
+                       paddingRight: 24)
     }
     
     private func checkLocationStatus() {
@@ -86,7 +98,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: SwipeCardStackDelegate,SwipeCardStackDataSource {
+extension ViewController: SwipeCardStackDelegate, SwipeCardStackDataSource {
     func cardStack(_ cardStack: SwipeCardStack, cardForIndexAt index: Int) -> SwipeCard {
         let card = SwipeCard()
         if index < cardData.count {
@@ -111,11 +123,11 @@ extension ViewController: CLLocationManagerDelegate {
             if last.coordinate.latitude != prevLocation.coordinate.latitude, last.coordinate.longitude != prevLocation.coordinate.longitude {
                 webservices.fetchYelpData(withLocation: last, withOffset: 0) {[weak self] (data, error) in
                     guard let strongSelf = self else { return }
-                    
                     if let error = error {
                         strongSelf.hanldeErrors(error: error)
                     } else if let data = data {
                         DispatchQueue.main.async {
+                            strongSelf.label.isHidden = true
                             strongSelf.cardData.append(contentsOf: data)
                             strongSelf.cardStack.appendCards(atIndices:Array(0..<data.count))
                         }
@@ -134,19 +146,17 @@ extension ViewController: ButtonStackViewDelegate {
             cardStack.swipe(.left, animated: true)
             swipeCount += 1
             if swipeCount % 10 == 0 {
-                webservices.fetchYelpData(withLocation: prevLocation, withOffset:cardData.count) { (data, error) in
+                webservices.fetchYelpData(withLocation: prevLocation, withOffset:cardData.count) {[weak self] (data, error) in
+                    guard let strongSelf = self else {return}
                     if let error = error {
-                        self.hanldeErrors(error: error)
+                        strongSelf.hanldeErrors(error: error)
                     } else {
                         if let data = data {
-                        DispatchQueue.main.async {
-                             let prevCount = self.cardData.count
-                             let newCount = prevCount + data.count
-                            self.cardData.append(contentsOf: data)
-                            for cards in self.cardData {
-                                print(cards.name)
-                            }
-                            self.cardStack.appendCards(atIndices:Array(prevCount..<newCount))
+                            DispatchQueue.main.async {
+                                let prevCount = strongSelf.cardData.count
+                                let newCount = prevCount + data.count
+                                strongSelf.cardData.append(contentsOf: data)
+                                strongSelf.cardStack.appendCards(atIndices:Array(prevCount..<newCount))
                             }
                         }
                     }
