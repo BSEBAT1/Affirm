@@ -12,6 +12,7 @@ import CoreLocation
 
 class ViewController: UIViewController {
     
+    // MARK: - Private Properties -
     private let cardStack = SwipeCardStack()
     private let buttons = ButtonStackView()
     private let locationManager = CLLocationManager()
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
         checkLocationStatus()
         addWarningLabel()
     }
-    
+    // MARK: - Configuration -
     private func addWarningLabel() {
               view.addSubview(label)
               label.text = " We Need Location Authorization to Load Cards"
@@ -72,7 +73,7 @@ class ViewController: UIViewController {
             askForLocationPermissions()
         }
     }
-    
+    // MARK: - Error Handling -
     private func askForLocationPermissions() {
         
         let alertController = UIAlertController(title: "Location Needed", message: "Please go to Settings and turn on the location permissions", preferredStyle: .alert)
@@ -98,7 +99,9 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - CardView Delegate Methods -
 extension ViewController: SwipeCardStackDelegate, SwipeCardStackDataSource {
+    
     func cardStack(_ cardStack: SwipeCardStack, cardForIndexAt index: Int) -> SwipeCard {
         let card = SwipeCard()
         if index < cardData.count {
@@ -116,6 +119,7 @@ extension ViewController: SwipeCardStackDelegate, SwipeCardStackDataSource {
     }
 }
 
+// MARK: - Location Manager Delegates -
 extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -139,6 +143,7 @@ extension ViewController: CLLocationManagerDelegate {
     }
 }
 
+// MARK: - Button Delegates -
 extension ViewController: ButtonStackViewDelegate {
     
     func didTapButton(button: UIButton) {

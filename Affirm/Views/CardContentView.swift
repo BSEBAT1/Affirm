@@ -10,6 +10,7 @@ import UIKit
 
 class CardContent: UIView {
     
+    // MARK: - Computer Properties -
     private let backgroundView: UIView = {
         let background = UIView()
         background.clipsToBounds = true
@@ -32,6 +33,7 @@ class CardContent: UIView {
         return gradient
     }()
     
+    // MARK: - Initializers -
     init(withImageURL image: String) {
         super.init(frame: .zero)
         self.imageView.loadImageUsingCacheWithUrlString(urlString: image)

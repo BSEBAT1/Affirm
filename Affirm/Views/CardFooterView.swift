@@ -11,10 +11,12 @@ import UIKit
 
 class CardFooterView: UIView {
     
+    // MARK: - Private Properties -
     private var label = UILabel()
     
     private var gradientLayer: CAGradientLayer?
     
+     // MARK: - Intializers -
     init(withTitle title: String?, subtitle: String?) {
         super.init(frame: CGRect.zero)
         backgroundColor = .clear
@@ -55,7 +57,7 @@ class CardFooterView: UIView {
                              height: label.intrinsicContentSize.height)
     }
 }
-
+ // MARK: - Extensions Shadows -
 extension NSAttributedString.Key {
     
     static var shadowAttribute: NSShadow = {

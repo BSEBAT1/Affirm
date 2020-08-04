@@ -11,7 +11,8 @@
 
 import UIKit
 
-// now any viewcontroller that adopts this protocol can use our buttons. 
+// now any viewcontroller that adopts this protocol can use our buttons.
+// MARK: - Protocol -
 protocol ButtonStackViewDelegate: AnyObject {
     func didTapButton(button: UIButton)
 }
@@ -20,6 +21,7 @@ class ButtonStackView: UIStackView {
     
     weak var delegate: ButtonStackViewDelegate?
     
+    // MARK: - Computed Properties -
     private let prevButton : UIButton = {
         let button = UIButton()
         button.setTitle("Previous", for: .normal)
@@ -39,12 +41,14 @@ class ButtonStackView: UIStackView {
         return button
     }()
     
+    // MARK: - Configuration -
     private func configureButtons() {
         let one: CGFloat = 1
         addArrangedSubview(from: prevButton, diameterMultiplier: one)
         addArrangedSubview(from: nextButton, diameterMultiplier: one)
     }
     
+    // MARK: - Intializers -
     override init(frame: CGRect) {
         super.init(frame: frame)
         distribution = .fillEqually
@@ -52,6 +56,10 @@ class ButtonStackView: UIStackView {
         axis = .horizontal
         configureButtons()
     }
+    
+    required init(coder: NSCoder) {
+           fatalError("init(coder:) has not been implemented")
+       }
     
     private func addArrangedSubview(from button: UIButton, diameterMultiplier: CGFloat) {
         let container = ButtonContainer()
@@ -61,10 +69,6 @@ class ButtonStackView: UIStackView {
         container.translatesAutoresizingMaskIntoConstraints = false
         container.widthAnchor.constraint(lessThanOrEqualTo: widthAnchor, multiplier: diameterMultiplier).isActive = true
         container.heightAnchor.constraint(equalTo: button.widthAnchor).isActive = true
-    }
-    
-    required init(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     @objc private func handleTap(_ button: UIButton) {

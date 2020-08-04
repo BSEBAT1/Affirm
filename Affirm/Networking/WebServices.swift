@@ -58,6 +58,7 @@ class WebServices {
                     completion(nil,"error parsing json data")
                     return}
                 for obj in jsonData {
+                    // I should have used a codable here but I ran out of time.
                     if let dictonary = obj as? [String:Any] {
                         if let name = dictonary["name"] as? String, let rating = dictonary["rating"] as? Double,  let imageUrl = dictonary["image_url"] as? String {
                             strongSelf.modelArray.append(CardModel.init(name: name, rating: String(rating), imageUrl: imageUrl))
